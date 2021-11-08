@@ -1,0 +1,59 @@
+button {
+    background-color: olive;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  #logo { 
+    display: inline-block;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  
+  nav {
+    list-style: none;  
+    text-align: left;
+    margin: 0;
+    background-color: navy;  /*turns nav bar white*/
+      color: white;
+      width: 100%;
+  }
+  nav > li {                                                             /*max-width: 768px*/
+      display:Inline-block;
+      padding: 10px 9px 10px 9px;                               /*nav bar text*/
+  }
+  
+   nav > li a {                                               
+       text-decoration: none;
+       color: black;
+       font-size: 14px;
+       padding: 5px 0px 5px 0px
+   }
+  
+   nav > li > a:hover {
+       color: black;
+   }
+
+   @media handheld and (max-width:768px),
+      screen and (max-width: 768px) {
+} 
+
+h1{
+    text-overflow: inherit;
+}
+
+.scrolling {
+  color : blue;
+	animation: scrolling 3s linear infinite;
+    -moz-animation: scrolling 3s linear infinite;
+    -webkit-animation: scrolling 3s linear infinite;
+    -ms-animation: scrolling 3s linear infinite;
+    -o-animation: scrolling 3s linear infinite;
+}

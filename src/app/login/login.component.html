@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title> Login</title>
+</head>
+<body style="background-color:peru">
+  <h1 style="font-family: 'Dancing Script', cursive; text-align: center;"><marquee behavior="scroll" direction="left">WELCOME  to  AST...Have a nice day :)</marquee>
+  </h1>
+<div class="row" style="justify-content: space-between;">
+    <div class="col-xs-12 col-lg-6">
+      <img class="img-fluid" style="width: 90%; height: 90%; margin: 15px;" src="assets/giphy.gif" alt="">
+    </div>
+    <div class="col-xs-12 col-lg-3" style="padding: 20px;">
+        <div class="card shadow" style="background-color:rgb(156, 194, 81)">
+            <div class="card-header" id="rainbow">
+                <h2>LOGIN</h2>
+            </div>
+            <div class="container mt-3 card-body">
+                <form [formGroup]="userForm" (ngSubmit)="submitUser()">
+                    <div>
+                        <i class="fa fa-spoon"></i>
+                        <label for="">User Email</label>
+                        <input [ngClass]="{
+                            'has-error':userForm.controls.email.touched && userForm.controls.email.invalid,
+                            'has-success' : userForm.controls.email.touched && userForm.controls.email.valid
+                        }" type="email" formControlName="email" class="form-control">
+                        <span style="color:red;"
+                        *ngIf="userForm.controls.email.touched && userForm.controls.email.invalid">Enter Valid Email</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-spoon"></i>
+                        <label for="">Password</label>
+                        <input [ngClass]="{
+                            'has-error':userForm.controls.password.touched && userForm.controls.password.invalid,
+                            'has-success' : userForm.controls.password.touched && userForm.controls.password.valid
+                        }" type="password" formControlName="password" class="form-control">
+                        <span style="color:red;"
+                         *ngIf="userForm.controls.password.touched && userForm.controls.password.invalid">Password is Required</span>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                            <input type="submit" class="btn-primary btn-sm" style="background-color: rgb(124, 25, 128); border-color: rgb(124, 25, 128);">
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-3" style="padding: 20px;">
+        <div class="card shadow" style="background-color:rgb(78, 149, 170);">
+            <div class="card-header" id="rainbow">
+                <h2>REGISTER</h2>
+            </div>
+            <div class="container mt-3 card-body">
+                <form [formGroup]="newUserForm" (ngSubmit)="submitNewUser()">
+                    <div>
+                        <i class="fa fa-spoon"></i>
+                        <label for="">Email</label>
+                        <input [ngClass]="{
+                            'has-error':newUserForm.controls.email.touched && newUserForm.controls.email.invalid,
+                            'has-success' : newUserForm.controls.email.touched && newUserForm.controls.email.valid
+                        }" type="email" formControlName="email" class="form-control">
+                        <span style="color:red;"
+                         *ngIf="newUserForm.controls.email.touched && newUserForm.controls.email.invalid">Enter Valid Email</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-spoon"></i>
+                        <label for="">Password</label>
+                        <input [ngClass]="{
+                            'has-error':newUserForm.controls.password.touched && newUserForm.controls.password.invalid,
+                            'has-success' : newUserForm.controls.password.touched && newUserForm.controls.password.valid
+                        }" type="password" formControlName="password" class="form-control">
+                        <span style="color:red;"
+                         *ngIf="newUserForm.controls.password.touched && newUserForm.controls.password.invalid">Password is Required</span>
+                    </div>
+                    <div>
+                        <label for="">Confirm Password</label>
+                        <input [ngClass]="{
+                            'has-error':newUserForm.controls.confirm.touched && newUserForm.controls.confirm.invalid,
+                            'has-success' : newUserForm.controls.confirm.touched && newUserForm.controls.confirm.valid
+                        }" id="confirm" type="password" formControlName="confirm" class="form-control">
+                         <span style="color: red;"
+                         *ngIf="newUserForm.controls.confirm.valid && !valid()">Password does not match!</span>
+                         <span style="color: green;"
+                         *ngIf="newUserForm.controls.confirm.valid && valid()">Password matches</span>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                            <input type="submit" class="btn-primary btn-sm" style="background-color: rgb(124, 25, 128); border-color: rgb(124, 25, 128);">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>

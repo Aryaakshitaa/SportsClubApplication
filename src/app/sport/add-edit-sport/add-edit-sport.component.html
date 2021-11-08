@@ -1,0 +1,18 @@
+<div class="form-fgroup row">
+<label class="col-sm-2 col-form-label">
+    Sports name
+</label>
+<div class="col-sm-10">
+    <input type="text" 
+    class="form-control" 
+    [(ngModel)]="SportName"
+    placeholder="Enter Sports Name">
+</div>
+</div>
+
+<button (click)="addSports()" *ngIf="sp.SportId==0" class="btn-primary">
+    Add
+</button>
+<button (click)="updateSports()" *ngIf="sp.SportId!=0" class="btn-primary">
+    Update
+</button>
