@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-  //https://cors-everywhere.herokuapp.com/
+  https://cors-everywhere.herokuapp.com/
   readonly APIUrl = "http://arya007-001-site1.htempurl.com/api";
-  //https://cors-everywhere.herokuapp.com/
+  https://cors-everywhere.herokuapp.com/
   readonly PhotoUrl = "http://arya007-001-site1.htempurl.com/Photos/";
   constructor(private http:HttpClient) { }
   getSportList():Observable<any[]>{
