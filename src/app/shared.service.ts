@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class SharedService {
 
-  readonly APIUrl = "https://arya007-001-site1.htempurl.com/api";
-  readonly PhotoUrl = "https://arya007-001-site1.htempurl.com/Photos/";
+  readonly APIUrl = "//arya007-001-site1.htempurl.com/api";
+  readonly PhotoUrl = "//arya007-001-site1.htempurl.com/Photos/";
   constructor(private http:HttpClient) { }
   getSportList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/Sport');
